@@ -12,7 +12,6 @@ import string
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 
-
 filtered_words = pd.read_csv("filtered_words.csv")["Words"].to_list()
 
 model_path = 'best_model.pkl'
