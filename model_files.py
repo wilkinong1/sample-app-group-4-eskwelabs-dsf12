@@ -4,10 +4,10 @@ import imblearn
 from nltk.corpus import stopwords
 import contractions
 import nltk
+nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 nltk.download('stopwords')
-nltk.download('wordnet')
 import string
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
