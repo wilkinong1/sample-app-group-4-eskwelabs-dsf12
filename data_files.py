@@ -145,25 +145,36 @@ def load_sentiment(start, end, brands):
 # topics
 
 def load_topics(start, end, brands):
+    if len(brands) == 0:
+        brands = list(set(df['brand_name']))
+
     df_topics_filtered = df_topics.copy(deep=True)
     df_topics_filtered.dropna(inplace=True)
     df_topics_filtered['date_index'] = df_topics_filtered['submission_time']
     df_topics_filtered.set_index('date_index', inplace=True)
     df_topics_filtered = df_topics_filtered.sort_values(by='submission_time', ascending=True)
     df_topics_filtered = df_topics_filtered[df_topics_filtered['brand_name'].isin(brands)]
-    df_topics_filtered = df_topics_filtered[start:end]
+    df_topics_filtered = df_topics_filtered[str(start):str(end)]
+
 
     df_topics_grouped = df_topics_filtered.groupby(['dominant_topic', 'submission_time']).aggregate({'brand_name': 'count'}).reset_index()
 
-    print(list(df_topics_grouped[df_topics_grouped['brand_name']==0]))
-    stacked_100 = go.Figure()
-    stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==0]['brand_name']), name='Topic 0')
-    stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==1]['brand_name']), name='Topic 1')
-    stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==2]['brand_name']), name='Topic 2')
-    stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==3]['brand_name']), name='Topic 3')
-    stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==4]['brand_name']), name='Topic 4')
-    stacked_100.update_layout(barmode='relative', title_text='Topics Per Day')
-    return stacked_100
+    # print(df_topics_grouped)
+
+    # print(list(df_topics_grouped[df_topics_grouped['brand_name']==0]))
+    # stacked_100 = go.Figure()
+    # stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==0]['brand_name']), name='Topic 0')
+    # stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==1]['brand_name']), name='Topic 1')
+    # stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==2]['brand_name']), name='Topic 2')
+    # stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==3]['brand_name']), name='Topic 3')
+    # stacked_100.add_bar(x=list(set(df_topics_grouped['submission_time'])), y=list(df_topics_grouped[df_topics_grouped['dominant_topic']==4]['brand_name']), name='Topic 4')
+    # stacked_100.update_layout(barmode='relative', title_text='Topics Per Day')
+    # return stacked_100
+
+    stacked100 = px.histogram(df_topics_grouped, x='submission_time', y='brand_name', color='dominant_topic', title='Topics Per Day', barnorm='percent', nbins=25, labels={"submission_time":"Date", 'brand_name': "Topic Count", "dominant_topic": "Topic"})
+    return stacked100
+
+
 
 
 
