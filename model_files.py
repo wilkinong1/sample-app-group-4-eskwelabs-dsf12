@@ -4,12 +4,13 @@ import imblearn
 from nltk.corpus import stopwords
 import contractions
 import nltk
+nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
 nltk.download('stopwords')
 import string
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
-nltk.download('averaged_perceptron_tagger')
-nltk.download('punkt')
+
 
 filtered_words = pd.read_csv("filtered_words.csv")["Words"].to_list()
 
