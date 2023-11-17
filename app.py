@@ -38,8 +38,9 @@ if 'combo_chart' not in st.session_state:
     st.session_state['combo_chart'] = data.load_combo(data.df['submission_time'].min().date(), data.df['submission_time'].max().date(), list(set(data.df['brand_name'])))
 if 'combo_sentiment' not in st.session_state:
     st.session_state['combo_sentiment'] = data.load_sentiment(data.df['submission_time'].min().date(), data.df['submission_time'].max().date(), list(set(data.df['brand_name'])))
-# if 'topic_chart' not in st.session_state:
-#     st.session_state[]
+if 'topic_chart' not in st.session_state:
+    st.session_state['topic_chart'] = data.load_topics(str(data.df['submission_time'].min().date()), str(data.df['submission_time'].max().date()), list(set(data.df['brand_name'])))
+
 
 if 'reviews' not in st.session_state:
     st.session_state['reviews'] = []
@@ -111,6 +112,7 @@ def main():
                 st.session_state['combo_chart'] = data.load_combo(min_date, max_date, list(brand_select))
                 st.session_state['combo_sentiment'] = data.load_sentiment(min_date, max_date, list(brand_select))
                 st.session_state['card_mean'] = data.check_mean(min_date, max_date, list(brand_select))
+                st.session_state['topic_chart'] = data.load_topics(str(min_date), str(max_date), list(brand_select))
 
             st.button('Filter', on_click=update_charts)
         
@@ -135,7 +137,7 @@ def main():
             sub_col3.plotly_chart(st.session_state['combo_sentiment'])
 
             sub_col4.plotly_chart(st.session_state['combo_chart'])
-            sub_col4.plotly_chart(data.load_topics('2023-03-01', '2023-03-21', list(set(data.df['brand_name']))))
+            sub_col4.plotly_chart(st.session_state['topic_chart'])
 
             
 
