@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from model_files import run_model
 
 load_dotenv()
-openai.api_key = os.getenv('API_KEY')
+openai.api_key = st.secrets['API_KEY']
 SKLLMConfig.set_openai_key(openai.api_key)
 mlzs_classifier = MultiLabelZeroShotGPTClassifier(openai_model="gpt-3.5-turbo", max_labels=3)
 
