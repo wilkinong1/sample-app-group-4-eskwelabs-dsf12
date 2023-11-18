@@ -16,15 +16,7 @@ mlzs_classifier = MultiLabelZeroShotGPTClassifier(openai_model="gpt-3.5-turbo", 
 st.set_page_config(page_title='Sprint 4 App', page_icon=None, layout="wide", initial_sidebar_state='collapsed')
 
 candidate_labels = [
-    "Quality",
-    "Price",
-    "Delivery",
-    "Service",
-    "Customer Support",
-    "Packaging",
-    "User Experience",
-    "Return Policy",
-    "Product Information",
+    'Brand Reputation', 'Marketing and Promotions', 'Pricing and Value', 'Product Quality', 'Product Variety'
 ]
 
 mlzs_classifier.fit(None, [candidate_labels])
