@@ -143,13 +143,13 @@ def main():
 
         with st.container():
             st.header('Recent Reviews')
-            st.dataframe(data.df_most_recent.style.applymap(color_sentiment, subset=['rule_patterns_sentiment']), hide_index=True, use_container_width=True, 
+            st.dataframe(data.df_most_recent.style.applymap(color_sentiment, subset=['rule_based_sentiment']), hide_index=True, use_container_width=True, 
                          column_config={
                              'rating': 'Rating',
                              'review_text': 'Review',
                              'product_name': 'Product',
                              'brand_name': 'Brand',
-                             'rule_patterns_sentiment': 'Sentiment'
+                             'rule_based_sentiment': 'Sentiment'
                          })
         
         with st.container():
