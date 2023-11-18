@@ -38,6 +38,7 @@ def check_mean(start, end, brands):
 
 # Line Chart
 def load_line(start, end, brands):
+        
     df_line_ave = df.groupby(['submission_time', 'brand_name']).agg({'rating' :'mean'}).reset_index()
 
     if len(brands) == 0:
