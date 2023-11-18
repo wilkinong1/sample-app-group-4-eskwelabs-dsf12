@@ -179,92 +179,83 @@ def load_topics(start, end, brands):
 
 
 
-topic_recs = {'topic 0': """
-                           Based on the customer feedback, here are the main takeaways and the corresponding problems that should be focused on for your business stakeholders:
+topic_recs = {'brand reputation': """
+                           Based on the feedback from customers, the main takeaways for our business stakeholders are:
 
-                            1. Lip product: The product made customers' lips dry, cracked, and bleeding.
-                           - Problem: The product formulation may be too drying and needs improvement to provide better lip hydration.
+                        1. The product is highly effective in hydrating lips and providing long-lasting moisture.
+                        2. Customers appreciate the variety of scents available.
+                        3. The product is easy to use and comes with a convenient applicator.
+                        4. Some customers have concerns about the safety of certain ingredients and suggest conducting research on the ingredients.
+                        5. There is a demand for more subtle and gentle scents.
 
-                            2. Skincare product for sensitive skin: The product caused skin irritation, breakouts, and redness.
-                            - Problem: The product may contain ingredients that are not suitable for sensitive skin or may need to be reformulated to be gentler on sensitive skin.
-
-                            3. Moisturizer for dry, sensitive skin: The product caused burning and redness, and was not effective for dry, sensitive skin.
-                            - Problem: The product formulation may be too harsh and irritating for sensitive skin, or it may not provide enough moisture for dry
                            """,
               
-              'topic 1': """
-                           Based on the feedback provided, some key takeaways and problems that should be focused on for the business stakeholders are:
+              'marketing and promotions': """
+                           Based on the feedback provided, the main takeaways are:
 
-                            1. Lip Mask:
-                            - Problem: Inconsistent effectiveness in hydrating lips overnight
-                            - Solution: Improve the hydrating properties of the lip mask to deliver consistent results
+                            1. Customers value products that effectively address specific skin concerns such as dark circles, uneven skin texture, and dullness.
+                            2. Products with vitamin C and E are highly sought after for their skin-hydrating and brightening properties.
+                            3. Customers appreciate products that provide noticeable results in a short period of time.
+                            4. Packaging and convenience of use are important factors for customer satisfaction.
+                            5. Some customers have experienced negative reactions, such as skin irritation and breakouts, with certain products.
+                            6. Customers appreciate when products are gifted to them for review and are more likely to recommend those that they received as gifts.
 
-                            2. Face Cleanser:
-                            - Problem: Leaves residue on the skin, causes breakouts, and feels oily
-                            - Solution: Reformulate the cleanser to effectively remove makeup and leave the skin feeling clean without any residue or oiliness
+                            Based on these takeaways, the following problems should be focused on for your business stakeholders:
 
-                            3. Moisturizer:
-                            - Problem: Dries out the skin and causes breakouts, not suitable for oily skin, and leaves a white cast
-                            - Solution: Develop a moisturizer that effectively hydrates the skin without causing dryness or breakouts, and that is suitable for various skin types and tones
-
-                            4. Face Cream:
-                            - Problem: Feels oily, causes breakouts, and doesn't provide enough hydration
-                            - Solution: Create a face cream that provides adequate hydration without feeling heavy or causing breakouts
-
-                            5. Sunscreen:
-                            - Problem: Leaves a white residue, doesn't blend well with makeup, breaks out the skin, and has an unpleasant scent
-                            - Solution: Develop a sunscreen that is lightweight, blends well with makeup, doesn't leave a white residue, and is suitable for sensitive skin
-
-                            6. Exfoliating Treatment:
-                            - Problem: Feels sandy and stings the eyes
-                            - Solution: Refine the exfoliating treatment to provide a smoother texture and eliminate any potential irritation or discomfort
-
-                            7. Cleansing Balm:
-                            - Problem: Leaves an oil residue on the skin, doesn't effectively remove makeup,
+                            1. Developing effective solutions for reducing dark circles.
+                            2. Creating products with vitamin C and E that provide hydration and illumination to the skin.
+                            3. Exploring ways to improve skin texture and appearance.
+                            4. Enhancing product packaging and convenience of use.
+                            5. Addressing any negative reactions or irritations caused by certain products.
+                            6. Implementing strategies to increase customer satisfaction and engagement through gifting and product trials.
                            
                            """,
 
-                'topic 3': """
-                            Based on the feedback provided, the following problems can be identified for the business stakeholders:
+                'pricing and value': """
+                            Based on the customer feedback, here are the main takeaways:
 
-                            1. Inconsistent product experience: Some customers have reported varying experiences with the same product. This could indicate a problem with product quality or formulation that needs to be addressed.
+                            1. Hydration is a key benefit of the product.
+                            2. The product is effective for dry and flaky lips.
+                            3. The product is especially helpful during the winter months.
+                            4. Some customers experienced negative reactions, such as breakouts or skin irritation.
+                            5. The product is praised for its soothing properties and ability to treat eczema and sensitive skin.
+                            6. The product is versatile and can be used on different parts of the body.
+                            7. The size and value of the product are appreciated by customers.
 
-                            2. Skin irritation and breakouts: Several customers have reported experiencing skin irritation, breakouts, and even cystic acne after using certain products. This suggests a potential issue with product ingredients or formulation that may not be suitable for all skin types.
+                            Based on these takeaways, the following problems can be identified for business stakeholders:
 
-                            3. Ineffective results: Some customers have expressed disappointment with the lack of noticeable results from using certain products. This indicates a need to improve product effectiveness and ensure that customers see the benefits they expect.
-
-                            4. Packaging and product usability: Customers have mentioned difficulties with product packaging, including leaks and separations. Additionally, some customers have found products to be hard to use, flaky, or with a pilling effect. These comments highlight the importance of addressing packaging and usability issues to enhance the overall customer experience.
-
-                            5. Price perception: A few customers have mentioned that certain products are pricey and may not be worth the cost. This feedback suggests a need to evaluate pricing strategies and ensure that products are perceived as a good value for the price.
-
-                            Overall, the business stakeholders should focus on addressing these problems related to product experience, skin irritation, effectiveness, packaging usability, and price perception in order to improve customer satisfaction and loyalty.
+                            1. Improve long-term effectiveness: Address the concerns of customers who did not see improvement in the long run by enhancing the product's formula or developing additional products to provide sustained hydration.
+                            2. Reduce negative reactions: Investigate and address the reports of breakouts and skin irritation to ensure the product is suitable for all skin types.
+                            3. Enhance versatility: Explore different formulations or product variations to meet the specific needs of different body parts and use cases.
+                            4. Increase size options: Consider offering different sizes or packaging options to cater to different customer preferences and needs.
+                            5. Improve value proposition: Assess the pricing strategy and consider offering more competitive prices or value-added features to enhance the perception of value for customers.
                            """,
-                'topic 2': """
-                            Based on the feedback provided, the main problems that should be focused on for the business stakeholders are:
 
-                            1. Product effectiveness: Customers have expressed mixed opinions on the effectiveness of the products. Some have seen positive results, while others have experienced negative effects, such as breakouts or skin irritation. The business should explore ways to improve the formulation and performance of their products to ensure consistent and satisfactory results for customers.
+                'product quality': """
+                            Main Takeaways:
+                            1. Customers love the effectiveness of the product in terms of cleansing and hydrating the skin.
+                            2. The scent of the product is a point of concern for some customers, with differing opinions on whether it is pleasant or not.
+                            3. The price of the product is a common criticism, with some customers feeling that it is expensive for what it offers.
+                            4. Some customers have experienced dryness or irritation after using the product.
+                            5. Packaging and application are mentioned positively by some customers.
 
-                            2. Allergic reactions and skin sensitivity: Several customers have reported experiencing allergic reactions, redness, and irritation after using the products. This highlights the need for the business to review and potentially modify their ingredients to minimize the risk of adverse reactions and cater to customers with sensitive skin.
-
-                            3. Texture and application issues: Many customers have commented on the texture and application experience of the products, including greasiness, pilling, and difficulty in mixing the product. These issues can impact the usability and
+                            Problems to focus on for business stakeholders:
+                            1. Improve the scent of the product to cater to a wider range of customer preferences.
+                            2. Evaluate the pricing strategy to optimize value for customers and address concerns about the product being expensive.
+                            3. Address issues with dryness and irritation by reviewing the product formulation and making necessary improvements.
+                            4. Consider customer feedback on packaging and application and determine if any modifications are needed to enhance the user experience.
                             """,
 
-                'topic 4': """
-                        Based on the feedback provided, the main problems that should be focused on for business stakeholders are:
+                'product variety': """
+                        Based on the customer reviews, here are the main takeaways and potential problems that should be focused on for your business stakeholders:
 
-                        1. Product effectiveness: Some customers are reporting positive results and improvements in their skin and appearance after using the product, while others have expressed disappointment and did not see any difference. It is important for stakeholders to understand the factors that contribute to the effectiveness of the product and identify any potential issues that may be affecting its performance.
+                        1. Effectiveness: Some customers found the lip mask to be effective in hydrating and softening their lips, especially for dry and cracked lips. However, other customers did not find it moisturizing enough or experienced chapped lips after using it. This indicates a need to improve the formula or address potential allergies.
 
-                        2. Skin reactions: A few customers have mentioned experiencing skin reactions, such as breakouts, blackheads, or dryness, after using the product. Stakeholders should investigate these reactions further and determine whether there are any potential allergens or irritants in the product formulation that may be causing these issues.
+                        2. Pricing: Although the request was not to provide pricing-related recommendations, many customers mentioned the high price of the product and questioned its value for money. This suggests the need to address price perception and potentially offer more affordable options.
 
-                        3. Container size and value for money: Several customers have expressed dissatisfaction with the amount of product they received in relation to the price. Stakeholders should assess the packaging and pricing strategy to ensure customers feel they are getting a fair value for their purchase.
+                        3. Packaging and scent: Customers appreciated the pleasant scent and packaging of the product, particularly mentioning the gummy bear and fruity scents. This presents an opportunity to continue innovating with enjoyable scents and appealing packaging.
 
-                        4. Texture and fragrance: Some customers have commented on the texture and fragrance of the product, with mixed opinions. Stakeholders should consider customer preferences and determine if any improvements can be made to enhance the overall sensory experience.
-
-                        5. Targeted marketing and pricing options: Customers have mentioned being interested in trying other products or brands that offer similar benefits at a different price point. Stakeholders should explore targeted marketing strategies to retain these customers and consider offering different pricing options to cater to varying customer budgets.
-
-                        6. Customer education and understanding: The feedback highlights a lack of understanding of certain product concepts, such as double cleansing. Stakeholders should consider providing educational resources or information to customers to address any confusion and ensure they can fully benefit from the product.
-
-                        By addressing these problems, stakeholders can enhance the product's performance, customer satisfaction, and overall business success.
+                        4. Longevity: Some customers mentioned that the lip mask lasted for a long time, while others felt that it dissipated quickly once applied. This discrepancy in longevity could be addressed to ensure consistency and prolong the product's effectiveness.
                            """
               
               
