@@ -156,7 +156,7 @@ def main():
             st.header('Topics Recommendations')
             rec_col1, rec_col2 = st.columns(spec=[1, 1], gap='small')
 
-            select_topic = rec_col1.selectbox('Select Topic to view Recommendations for: ', ('Topic 0', 'Topic 1', 'Topic 2', 'Topic 3', 'Topic 4'))
+            select_topic = rec_col1.selectbox('Select Topic to view Recommendations for: ', ('Brand Reputation', 'Marketing and Promotions', 'Pricing and Value', 'Product Quality', 'Product Variety'))
 
             rec_col2.subheader(select_topic)
             rec_col2.write(data.topic_recs[select_topic.lower()])
