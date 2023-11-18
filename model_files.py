@@ -18,6 +18,10 @@ model_path = 'best_model.pkl'
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
+base_model_path = 'best_model_baseline_reduced_lr.pkl'
+with open(base_model_path, 'rb') as file:
+    base_model = pickle.load(file)
+
 
 
 
@@ -54,4 +58,5 @@ def run_model(text):
 
     input = " ".join(preprocess(text))
 
-    return model.predict([input])
+    return base_model.predict([input])
+
