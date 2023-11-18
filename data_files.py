@@ -96,7 +96,7 @@ def load_combo(start, end, brands):
 
 
 # df sorted by date most recent
-df_most_recent = df.sort_values(by='submission_time', ascending=False)[['rating', 'review_text', 'product_name', 'brand_name', 'rule_patterns_sentiment']].head(50)
+df_most_recent = df.sort_values(by='submission_time', ascending=False)[['rating', 'review_text', 'product_name', 'brand_name', 'rule_based_sentiment']].head(50)
 
 
 # sentiment over time
@@ -111,27 +111,27 @@ def load_sentiment(start, end, brands):
     df_filtered = df_filtered.sort_values(by='submission_time', ascending=True)
     df_filtered = df_filtered[start:end]
 
-    df_sentiment = df_filtered.groupby(['submission_time', 'rule_patterns_sentiment']).agg({'brand_name': 'count'}).reset_index(names=['submission_time', 'rules_patterns_sentiment']).sort_values(by='submission_time', ascending=True)
+    df_sentiment = df_filtered.groupby(['submission_time', 'rule_based_sentiment']).agg({'brand_name': 'count'}).reset_index(names=['submission_time', 'rules_based_sentiment']).sort_values(by='submission_time', ascending=True)
 
     combo_sentiment = make_subplots()
     combo_sentiment.add_trace(
         go.Scatter(
-            x=df_sentiment[df_sentiment['rules_patterns_sentiment']=='Positive']['submission_time'],
-            y=df_sentiment[df_sentiment['rules_patterns_sentiment']=='Positive']['brand_name'],
+            x=df_sentiment[df_sentiment['rules_based_sentiment']=='Positive']['submission_time'],
+            y=df_sentiment[df_sentiment['rules_based_sentiment']=='Positive']['brand_name'],
             name="Positive Sentiment",
             stackgroup='stack'
         ))
     combo_sentiment.add_trace(
         go.Scatter(
-            x=df_sentiment[df_sentiment['rules_patterns_sentiment']=='Neutral']['submission_time'],
-            y=df_sentiment[df_sentiment['rules_patterns_sentiment']=='Neutral']['brand_name'],
+            x=df_sentiment[df_sentiment['rules_based_sentiment']=='Neutral']['submission_time'],
+            y=df_sentiment[df_sentiment['rules_based_sentiment']=='Neutral']['brand_name'],
             name="Neutral Sentiment",
             stackgroup='stack'
         ))
     combo_sentiment.add_trace(
         go.Scatter(
-            x=df_sentiment[df_sentiment['rules_patterns_sentiment']=='Negative']['submission_time'],
-            y=df_sentiment[df_sentiment['rules_patterns_sentiment']=='Negative']['brand_name'],
+            x=df_sentiment[df_sentiment['rules_based_sentiment']=='Negative']['submission_time'],
+            y=df_sentiment[df_sentiment['rules_based_sentiment']=='Negative']['brand_name'],
             name="Negative Sentiment",
             stackgroup='stack'
         ))
